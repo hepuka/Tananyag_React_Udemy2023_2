@@ -9,6 +9,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      {/* ha nem akarunk hamis ágat jelölni. Ha a feltétel első értéke true akkor
+      a feltétel második értéke végrehajtódik
+      {isOpen && <Order closeHour={closeHour} openHour={openHour}/> } */}
       {isOpen ? (
         <Order closeHour={closeHour} openHour={openHour} />
       ) : (
