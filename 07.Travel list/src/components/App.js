@@ -7,6 +7,7 @@ import Stats from "./Stats";
 export default function App() {
   const [items, setItems] = useState([]);
 
+  console.log(items);
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
   }
@@ -34,12 +35,12 @@ export default function App() {
   return (
     <div className="app">
       <Logo />
-      <Form onAddItems={handleAddItems} />
+      <Form handleAddItems={handleAddItems} />
       <PackingList
         items={items}
-        onDeleteItem={handleDeleteItem}
-        onToggleItem={handleToggleItem}
-        onClearList={handleClearList}
+        handleDeleteItem={handleDeleteItem}
+        handleToggleItem={handleToggleItem}
+        handleClearList={handleClearList}
       />
       <Stats items={items} />
     </div>
