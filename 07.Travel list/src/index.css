@@ -39,7 +39,7 @@ h1 {
 
 .add-form {
   background-color: #e5771f;
-  padding: 2.8rem 0;
+  padding: 2.8rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,5 +128,5 @@ input[type="checkbox"] {
   background-color: #76c7ad;
   text-align: center;
   font-weight: 700;
-  padding: 3.2rem 0;
+  padding: 3.2rem 2.5rem;
 }
