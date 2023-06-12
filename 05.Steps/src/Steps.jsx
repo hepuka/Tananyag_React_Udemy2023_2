@@ -1,21 +1,23 @@
 import React from "react";
 import { useState } from "react";
-
+import { messages } from "./messages.js";
 import StepMessage from "./StepMessage";
 import Button from "./Button";
-
-import { messages } from "./messages.js";
 
 const Steps = () => {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
   const handlePrevious = () => {
-    if (step > 1) setStep((s) => s - 1);
+    if (step > 1) setStep((count) => count - 1);
   };
 
   const handleNext = () => {
-    if (step < 3) setStep((s) => s + 1);
+    if (step < 3) setStep((count) => count + 1);
+  };
+
+  const info = () => {
+    alert(`Learn how to ${messages[step - 1]}`);
   };
 
   return (
@@ -33,26 +35,24 @@ const Steps = () => {
           </div>
 
           <StepMessage step={step}>
-            {messages[step - 1]}
+            {/* children part start */}
+            <p> {messages[step - 1]}</p>
+
             <div className="buttons">
-              <Button
-                bgColor="#e7e7e7"
-                textColor="#333"
-                onClick={() => alert(`Learn how to ${messages[step - 1]}`)}
-              >
+              <Button bgColor="#e7e7e7" textColor="#333" func={info}>
                 Learn how
               </Button>
             </div>
+            {/* children part end */}
           </StepMessage>
 
           <div className="buttons">
-            <Button bgColor="#7950f2" textColor="#fff" onClick={handlePrevious}>
+            <Button bgColor="#7950f2" textColor="#fff" func={handlePrevious}>
               <span>👈</span> Previous
             </Button>
 
-            <Button bgColor="#7950f2" textColor="#fff" onClick={handleNext}>
+            <Button bgColor="#7950f2" textColor="#fff" func={handleNext}>
               Next <span>👉</span>
-              <span>🤓</span>
             </Button>
           </div>
         </div>
