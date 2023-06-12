@@ -1,10 +1,14 @@
 import React from "react";
 
-const Skill = ({ skill, emoji, color }) => {
+const Skill = ({ data }) => {
   return (
-    <div className="skill" style={{ backgroundColor: color }}>
-      <span>{skill}</span>
-      <span>{emoji}</span>
+    <div className="skill" style={{ backgroundColor: data.color }}>
+      <span>{data.skill}</span>
+      <span>
+        {data.level === "beginner" && "👶"}
+        {data.level === "intermediate" && "👍"}
+        {data.level === "advanced" && "💪"}
+      </span>
     </div>
   );
 };
