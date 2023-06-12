@@ -10,26 +10,17 @@ const Steps = () => {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
-  // const [test, setTest] = useState({ name: "Jonas" });
-
-  function handlePrevious() {
+  const handlePrevious = () => {
     if (step > 1) setStep((s) => s - 1);
-  }
+  };
 
-  function handleNext() {
-    if (step < 3) {
-      setStep((s) => s + 1);
-      // setStep((s) => s + 1);
-    }
-
-    // BAD PRACTICE
-    // test.name = "Fred";
-    // setTest({ name: "Fred" });
-  }
+  const handleNext = () => {
+    if (step < 3) setStep((s) => s + 1);
+  };
 
   return (
     <div>
-      <button className="close" onClick={() => setIsOpen((is) => !is)}>
+      <button className="close" onClick={() => setIsOpen((isopen) => !isopen)}>
         &times;
       </button>
 
