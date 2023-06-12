@@ -28,7 +28,7 @@ function App() {
       <hr />
 
       {formData.map((item) => (
-        <Datas data={item} />
+        <Datas data={item} key={item.id} />
       ))}
     </div>
   );

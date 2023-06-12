@@ -8,8 +8,8 @@ const Input = ({ getData, handleAddItems }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newItem = { nevInput, cimInput, selectInput, id: Date.now() };
-    handleAddItems(newItem);
+
+    handleAddItems({ nevInput, cimInput, selectInput, id: Date.now() });
 
     setCimInput("");
     setNevInput("");
