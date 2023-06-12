@@ -1,5 +1,14 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
+.buttons {
+  display: flex;
+  gap: 10px;
+}

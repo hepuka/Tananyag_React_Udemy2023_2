@@ -9,27 +9,28 @@ const Counter = () => {
 
   return (
     <>
-      <div>
+      <div className="buttons">
         <button onClick={() => setStep((c) => c - 1)}>-</button>
         <span>Step: {step}</span>
         <button onClick={() => setStep((c) => c + 1)}>+</button>
       </div>
-      <div>
+      <div className="buttons">
         <button onClick={() => setCount((c) => c - step)}>-</button>
         <span>Count: {count}</span>
         <button onClick={() => setCount((c) => c + step)}>+</button>
       </div>
-
-      <span>
-        {count === 0
-          ? `Today is `
-          : count > 0
-          ? `${count} days from today is `
-          : count < 0
-          ? `${Math.abs(count)} days ago was `
-          : ""}
-      </span>
-      <span>{date.toDateString()}</span>
+      <div>
+        <p>
+          {count === 0
+            ? `Today is `
+            : count > 0
+            ? `${count} days from today is `
+            : count < 0
+            ? `${Math.abs(count)} days ago was `
+            : ""}
+          {date.toDateString()}
+        </p>
+      </div>
     </>
   );
 };
