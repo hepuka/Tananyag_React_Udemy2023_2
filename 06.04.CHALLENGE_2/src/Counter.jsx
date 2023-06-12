@@ -10,13 +10,27 @@ const Counter = () => {
   return (
     <>
       <div className="buttons">
-        <button onClick={() => setStep((c) => c - 1)}>-</button>
+        {/* <button onClick={() => setStep((c) => c - 1)}>-</button>
         <span>Step: {step}</span>
-        <button onClick={() => setStep((c) => c + 1)}>+</button>
+        <button onClick={() => setStep((c) => c + 1)}>+</button> */}
+        <input
+          type="range"
+          min={1}
+          max={10}
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
+        <span>Step: {step}</span>
       </div>
       <div className="buttons">
         <button onClick={() => setCount((c) => c - step)}>-</button>
-        <span>Count: {count}</span>
+        {/* <span>Count: {count}</span> */}
+        <input
+          type="text"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
+
         <button onClick={() => setCount((c) => c + step)}>+</button>
       </div>
       <div>
