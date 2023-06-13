@@ -2,7 +2,7 @@ import React from "react";
 
 const Reset = ({ reset }) => {
   return (
-    <div>
+    <div className="btn">
       <button onClick={reset}>Reset</button>
     </div>
   );
