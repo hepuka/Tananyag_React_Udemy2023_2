@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 45vw;
+  margin-bottom: 20px;
+}
