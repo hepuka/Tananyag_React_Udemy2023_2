@@ -11,9 +11,10 @@ function App() {
     setFormData(() => [...formData, item]);
   };
 
-  const getData = (e) => {
-    setInputData(e.target.value);
-  };
+  //ha nem közvetlenül a setInputData-t adom át, hanem egy függvényt
+  // const getData = (e) => {
+  //   setInputData(e.target.value);
+  // };
 
   return (
     <div className="App">
@@ -33,7 +34,7 @@ function App() {
 
       <div className="comps">
         <div className="child1">
-          <Input getData={getData} handleAddItems={handleAddItems} />
+          <Input setInputData={setInputData} handleAddItems={handleAddItems} />
         </div>
 
         <div className="child2">

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Input = ({ getData, handleAddItems }) => {
+const Input = ({ setInputData, handleAddItems }) => {
   const [nevInput, setNevInput] = useState("");
   const [cimInput, setCimInput] = useState("");
   const [selectInput, setselectInput] = useState("férfi");
@@ -20,7 +20,11 @@ const Input = ({ getData, handleAddItems }) => {
       <div className="inp">
         <h2>Input komponens</h2>
         <label htmlFor="rand">Text:</label>
-        <input type="text" name="rand" onChange={getData} />
+        <input
+          type="text"
+          name="rand"
+          onChange={(e) => setInputData(e.target.value)}
+        />
       </div>
       <hr />
       <form onSubmit={handleSubmit}>
