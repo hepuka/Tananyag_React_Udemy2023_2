@@ -9,13 +9,12 @@ const Products = () => {
     { name: "tshirt", price: 34 },
     { name: "necklace", price: 10 },
     { name: "jumper", price: 30 },
-    { name: "vest", price: 50 },
   ];
 
   return (
     <div className="product-list">
       {products.map((item) => (
-        <Card name={item.name} price={item.price} />
+        <Card name={item.name} price={item.price} key={item.name} />
       ))}
     </div>
   );
