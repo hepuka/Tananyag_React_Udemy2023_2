@@ -6,12 +6,9 @@ const Accordion = () => {
   return (
     <div className="accordion">
       {faqs.map((item, index) => (
-        <AccordionItem
-          title={item.title}
-          text={item.text}
-          num={index}
-          key={item.title}
-        />
+        <AccordionItem title={item.title} num={index} key={item.title}>
+          {item.text}
+        </AccordionItem>
       ))}
     </div>
   );
