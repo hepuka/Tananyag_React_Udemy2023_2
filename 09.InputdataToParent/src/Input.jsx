@@ -17,10 +17,12 @@ const Input = ({ getData, handleAddItems }) => {
 
   return (
     <>
-      <div>
-        <input type="text" onChange={getData} />
+      <div className="inp">
+        <h2>Input komponens</h2>
+        <label htmlFor="rand">Text:</label>
+        <input type="text" name="rand" onChange={getData} />
       </div>
-
+      <hr />
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="nameInput">Név:</label>

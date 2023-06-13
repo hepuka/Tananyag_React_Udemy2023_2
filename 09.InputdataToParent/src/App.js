@@ -1,13 +1,11 @@
 import { useState } from "react";
 import Input from "./Input";
-import Datas from "./Datas";
+
+import Display from "./Display";
 
 function App() {
   const [inputdata, setInputData] = useState();
   const [formData, setFormData] = useState([]);
-
-  console.log(inputdata);
-  console.log(formData);
 
   const handleAddItems = (item) => {
     setFormData(() => [...formData, item]);
@@ -19,17 +17,29 @@ function App() {
 
   return (
     <div className="App">
-      <Input getData={getData} handleAddItems={handleAddItems} />
+      <div className="parent">
+        <h2>App komponens</h2>
+        <p> Adat az input komponensből:</p>
+        <p>{inputdata}</p>
 
-      <p>
-        Data from child component: <span>{inputdata}</span>
-      </p>
+        {formData.map((item) => (
+          <div key={item.id}>
+            <span>{item.nevInput} </span>
+            <span>{item.cimInput} </span>
+            <span>{item.selectInput}</span>
+          </div>
+        ))}
+      </div>
 
-      <hr />
+      <div className="comps">
+        <div className="child1">
+          <Input getData={getData} handleAddItems={handleAddItems} />
+        </div>
 
-      {formData.map((item) => (
-        <Datas data={item} key={item.id} />
-      ))}
+        <div className="child2">
+          <Display inputdata={inputdata} formData={formData} />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,67 @@
+.App {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 1200px;
+  margin: 40px auto;
+}
+
+.parent {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+
+.comps {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+  gap: 100px;
+  padding: 20px;
+}
+
+.child1 {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: aquamarine;
+  width: 320px;
+}
+
+.child2 {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: chartreuse;
+  width: 320px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.inp {
+  text-align: center;
+}
+
+select {
+  padding: 5px 15px;
+}
+
+form button {
+  padding: 3px 15px;
+  width: 100px;
+}
