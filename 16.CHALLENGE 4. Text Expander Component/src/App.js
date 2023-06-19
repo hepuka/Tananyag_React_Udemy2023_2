@@ -35,6 +35,7 @@ function App() {
 }
 
 function TextExpander({
+  //ha nem adunk át props-ot a komponens alkalmazásakor, akkor ezek az értékek lesznek a default értékek
   collapsedNumWords = 10,
   expandButtonText = "Show more",
   collapseButtonText = "Show less",
@@ -57,6 +58,7 @@ function TextExpander({
     marginLeft: "6px",
     color: buttonColor,
   };
+
   return (
     <div className={className}>
       <span>{displayText}</span>
