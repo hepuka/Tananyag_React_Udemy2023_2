@@ -45,6 +45,7 @@ function Tabbed({ content }) {
       {activeTab <= 2 ? (
         <TabContent
           item={content.at(activeTab)}
+          // item={content[activeTab]}
           key={content.at(activeTab).summary}
         />
       ) : (
@@ -80,15 +81,18 @@ function TabContent({ item }) {
     // setLikes(likes + 1);
     // setLikes(likes + 1);
 
-    setLikes((likes) => likes + 1);
-    setLikes((likes) => likes + 1);
-    setLikes((likes) => likes + 1);
+    setLikes((likes) => likes + 3);
+
+    //vagy
+
+    // setLikes((likes) => likes + 1);
+    // setLikes((likes) => likes + 1);
+    // setLikes((likes) => likes + 1);
   }
 
   function handleUndo() {
     setShowDetails(true);
     setLikes(0);
-    console.log(likes);
   }
 
   function handleUndoLater() {
