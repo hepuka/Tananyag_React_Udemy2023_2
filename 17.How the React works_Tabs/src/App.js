@@ -26,9 +26,6 @@ export default function App() {
   );
 }
 
-// console.log(<DifferentContent test={23} />);
-// console.log(DifferentContent());
-
 function Tabbed({ content }) {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -44,8 +41,7 @@ function Tabbed({ content }) {
 
       {activeTab <= 2 ? (
         <TabContent
-          item={content.at(activeTab)}
-          // item={content[activeTab]}
+          item={content.at(activeTab)} // item={content[activeTab]}
           key={content.at(activeTab).summary}
         />
       ) : (
