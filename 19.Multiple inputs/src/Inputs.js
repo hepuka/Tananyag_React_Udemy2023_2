@@ -58,6 +58,7 @@ function Inputs() {
         value={details.name}
         placeholder="name"
         onChange={handleChange}
+        required
       />
       <input
         type="email"
@@ -65,6 +66,7 @@ function Inputs() {
         value={details.email}
         placeholder="email"
         onChange={handleChange}
+        required
       />
       <input
         type="password"
@@ -72,6 +74,7 @@ function Inputs() {
         value={details.password}
         placeholder="password"
         onChange={handleChange}
+        required
       />
       <input
         type="text"
@@ -79,6 +82,7 @@ function Inputs() {
         value={details.address}
         placeholder="address"
         onChange={handleChange}
+        required
       />
       <textarea name="bio" value={details.bio} onChange={handleChange} />
       <select name="version" onChange={handleChange} value={details.version}>
