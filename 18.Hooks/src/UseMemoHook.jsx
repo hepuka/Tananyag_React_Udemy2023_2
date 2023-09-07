@@ -17,15 +17,14 @@ export default function UseMemoHook() {
     if (!comments) return null;
 
     let longestName = "";
+
     for (let i = 0; i < comments.length; i++) {
-      let currentName = comments[i].name;
-      if (currentName.length > longestName.length) {
-        longestName = currentName;
+      if (comments[i].name.length > longestName.length) {
+        longestName = comments[i].name;
       }
     }
 
-    console.log("THIS WAS COMPUTED");
-
+    console.log("LongestName has been detected");
     return longestName;
   };
 
@@ -33,17 +32,19 @@ export default function UseMemoHook() {
 
   return (
     <div className="App">
-      <div> {getLongestName} </div>
+      <div>LongestName: {getLongestName} </div>
 
-      <button
-        onClick={() => {
-          setToggle(!toggle);
-        }}
-      >
-        {" "}
-        Toggle
-      </button>
-      {toggle && <h1> toggle </h1>}
+      <div>
+        <button
+          onClick={() => {
+            setToggle(!toggle);
+          }}
+        >
+          Toggle
+        </button>
+      </div>
+
+      {toggle && <h1> toggled </h1>}
     </div>
   );
 }
