@@ -21,8 +21,6 @@ const Footer = () => {
       )}
     </footer>
   );
-
-  // return React.createElement("footer", null, "We're currently open!");
 };
 
 export default Footer;
