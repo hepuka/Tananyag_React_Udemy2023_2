@@ -11,7 +11,9 @@ function App() {
 
   return (
     <div>
-      <h1>Current time: {time}</h1>
+      <h1>
+        Current date and time: {new Date().toLocaleDateString()} {time}
+      </h1>
     </div>
   );
 }
