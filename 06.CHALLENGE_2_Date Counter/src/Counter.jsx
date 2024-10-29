@@ -5,18 +5,17 @@ const Counter = () => {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
   const date = new Date();
+
   date.setDate(date.getDate() + count);
 
   const handleReset = () => {
     setStep(1);
     setCount(0);
   };
+
   return (
     <>
       <div className="buttons">
-        {/* <button onClick={() => setStep((c) => c - 1)}>-</button>
-        <span>Step: {step}</span>
-        <button onClick={() => setStep((c) => c + 1)}>+</button> */}
         <input
           type="range"
           min={1}
@@ -28,7 +27,6 @@ const Counter = () => {
       </div>
       <div className="buttons">
         <button onClick={() => setCount((c) => c - step)}>-</button>
-        {/* <span>Count: {count}</span> */}
         <input
           type="text"
           value={count}
