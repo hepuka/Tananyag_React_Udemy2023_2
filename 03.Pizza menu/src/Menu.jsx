@@ -9,6 +9,8 @@ const Menu = () => {
     <main className="menu">
       <h2>Our menu</h2>
 
+      {/* feltételes rendereléskor ne használd az and operátort, mindig a ternáris operátort kell használni.
+      ? után a true ágat és a : után a false ágat. Ha nem akarunk semmit a false ágba rakni, akkor null-t kell megadni a : után */}
       {numPizzas > 0 ? (
         <>
           <p>

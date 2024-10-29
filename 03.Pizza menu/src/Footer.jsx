@@ -7,6 +7,7 @@ const Footer = () => {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
+  console.log(isOpen);
   return (
     <footer className="footer">
       {/* ha nem akarunk hamis ágat jelölni. Ha a feltétel első értéke true akkor
