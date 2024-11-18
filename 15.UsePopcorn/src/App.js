@@ -50,7 +50,7 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, arr) => acc + cur / arr.length, 0);
 
-////////////////////////
+
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -87,7 +87,6 @@ export default function App() {
     </>
   );
 }
-////////////////////////
 
 const NavBar = ({ children }) => {
   return (
@@ -167,7 +166,6 @@ const MovieList = ({ movies }) => {
       ))}
     </ul>
   );
-};
 
 const Movie = ({ movie }) => {
   return (
