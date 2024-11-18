@@ -50,7 +50,6 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, arr) => acc + cur / arr.length, 0);
 
-
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -72,17 +71,6 @@ export default function App() {
           <WatchedSummary watched={watched} />
           <WatchedMoviesList watched={watched} />
         </Box>
-
-        {/* 2. Passing elements as Props */}
-        {/* <Box element={<MovieList movies={movies} />} />
-        <Box
-          element={
-            <>
-              <WatchedSummary watched={watched} />
-              <WatchedMoviesList watched={watched} />
-            </>
-          }
-        /> */}
       </Main>
     </>
   );
@@ -113,19 +101,6 @@ const Box = ({ children }) => {
     </div>
   );
 };
-
-// const Box = ({ element }) => {
-//   const [isOpen, setIsOpen] = useState(true);
-
-//   return (
-//     <div className="box">
-//       <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
-//         {isOpen ? "–" : "+"}
-//       </button>
-//       {isOpen && element}
-//     </div>
-//   );
-// };
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -166,7 +141,7 @@ const MovieList = ({ movies }) => {
       ))}
     </ul>
   );
-
+};
 const Movie = ({ movie }) => {
   return (
     <li>
