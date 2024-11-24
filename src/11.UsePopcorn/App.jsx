@@ -13,21 +13,26 @@ import { NumResults } from "./components/NumResults.jsx";
 import { Search } from "./components/Search.jsx";
 
 export const average = (arr) =>
-  arr.reduce((acc, cur) => acc + cur / arr.length, 0);
+  arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+const KEY = "ed2a0cca";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState(tempWatchedData);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [selectedId, setSelectedId] = useState(null);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     async function fetchMovies() {
       try {
         setIsLoading(true);
+        setError("");
 
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=ed2a0cca&s=inception`
+          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
         );
 
         if (!response.ok)
@@ -42,13 +47,20 @@ export default function App() {
         setIsLoading(false);
       }
     }
+
+    if (query.length < 3) {
+      setMovies([]);
+      setError("");
+      return;
+    }
+
     fetchMovies();
-  }, []);
+  }, [query]);
 
   return (
     <>
       <NavBar>
-        <Search />
+        <Search query={query} setQuery={setQuery} />
         <NumResults movies={movies} />
       </NavBar>
 
