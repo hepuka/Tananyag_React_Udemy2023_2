@@ -62,6 +62,10 @@ export default function App() {
     setSelectedId(selectedId === id ? null : id);
   };
 
+  function handleCloseMovie(id) {
+    setSelectedId((selectedId) => (id === selectedId ? null : id));
+  }
+
   return (
     <>
       <NavBar>
@@ -79,7 +83,11 @@ export default function App() {
         </Box>
         <Box>
           {selectedId ? (
-            <MovieDetails selectedId={selectedId} watched={watched} />
+            <MovieDetails
+              selectedId={selectedId}
+              onCloseMovie={handleCloseMovie}
+              watched={watched}
+            />
           ) : (
             <>
               <WatchedSummary watched={watched} />
