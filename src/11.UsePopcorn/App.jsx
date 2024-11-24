@@ -13,7 +13,7 @@ import { NumResults } from "./components/NumResults.jsx";
 import { Search } from "./components/Search.jsx";
 
 export const average = (arr) =>
-  arr.reduce((acc, cur, arr) => acc + cur / arr.length, 0);
+  arr.reduce((acc, cur) => acc + cur / arr.length, 0);
 
 export default function App() {
   const [movies, setMovies] = useState([]);
