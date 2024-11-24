@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { Loader } from "./components/Loader.jsx";
-import { tempWatchedData } from "./tempWatchedData.jsx";
+import { tempWatchedData } from "./data/tempWatchedData.jsx";
 import { ErrorMessage } from "./components/ErrorMessage.jsx";
 import { NavBar } from "./components/NavBar.jsx";
 import { Main } from "./components/Main.jsx";
@@ -17,7 +17,7 @@ export const average = (arr) =>
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
+  const [watched, setWatched] = useState(tempWatchedData);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
