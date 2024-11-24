@@ -1,6 +1,6 @@
-export const Movie = ({ movie }) => {
+export const Movie = ({ movie, onselectMovie }) => {
   return (
-    <li>
+    <li onClick={() => onselectMovie(movie.imdbID)}>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
       <h3>{movie.Title}</h3>
       <div>
