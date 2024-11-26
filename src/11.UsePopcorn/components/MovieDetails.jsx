@@ -44,21 +44,18 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
     (movie) => movie.imdbID === selectedId
   )?.userRating;
 
-  useEffect(
-    function () {
-      async function getMovieDetails() {
-        setIsLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
-        );
-        const data = await res.json();
-        setMovies(data);
-        setIsLoading(false);
-      }
-      getMovieDetails();
-    },
-    [selectedId]
-  );
+  useEffect(() => {
+    const getMovieDetails = async () => {
+      setIsLoading(true);
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+      );
+      const data = await res.json();
+      setMovies(data);
+      setIsLoading(false);
+    };
+    getMovieDetails();
+  }, [selectedId]);
 
   useEffect(
     function () {
@@ -67,7 +64,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 
       // clean up function
       return function () {
-        document.title = "usePopcorn";
+        document.title = "CinemaCity";
       };
     },
     [title]
