@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [amount, setAmount] = useState(1);
   const [fromCur, setFromCur] = useState("EUR");
-  const [toCur, setToCur] = useState("USD");
+  const [toCur, setToCur] = useState("HUF");
   const [converted, setConverted] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -20,7 +20,8 @@ export default function App() {
       setIsLoading(false);
     };
 
-    if (fromCur === toCur) return setConverted(amount);
+    if (fromCur === toCur)
+      return setConverted("Please, choose a different currency");
     convert();
   }, [amount, fromCur, toCur]);
 
@@ -39,8 +40,7 @@ export default function App() {
       >
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
-        <option value="CAD">CAD</option>
-        <option value="INR">INR</option>
+        <option value="HUF">HUF</option>
       </select>
       <select
         value={toCur}
@@ -49,8 +49,7 @@ export default function App() {
       >
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
-        <option value="CAD">CAD</option>
-        <option value="INR">INR</option>
+        <option value="HUF">HUF</option>
       </select>
       <p>
         {converted} {toCur}
