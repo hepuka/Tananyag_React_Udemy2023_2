@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../App.css";
 import StarRating from "./StarRating.jsx";
 import { Loader } from "./Loader.jsx";
@@ -8,6 +8,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [userRating, setUserRating] = useState("");
+  const countRef = useRef(0);
 
   const {
     Title: title,
@@ -24,6 +25,10 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 
   const KEY = "ed2a0cca";
 
+  useEffect(() => {
+    if (userRating) countRef.current++;
+  }, [userRating]);
+
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
@@ -33,6 +38,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
       imdbRating: Number(imdbRating),
       runtime: Number(runtime.split(" ").at(0)),
       userRating,
+      countRatingDecisions: countRef.current,
     };
 
     onAddWatched(newWatchedMovie);
