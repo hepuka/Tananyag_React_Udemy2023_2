@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "../App.css";
 import StarRating from "./StarRating.jsx";
 import { Loader } from "./Loader.jsx";
+import { useKey } from "../useKey.js";
 
 const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +50,8 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   const watchedUserRating = watched.find(
     (movie) => movie.imdbID === selectedId
   )?.userRating;
+
+  useKey("escape", onCloseMovie);
 
   useEffect(() => {
     const getMovieDetails = async () => {
