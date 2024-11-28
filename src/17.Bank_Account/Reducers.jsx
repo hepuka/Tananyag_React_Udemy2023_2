@@ -22,10 +22,10 @@ export function reducer(state, action) {
       return { ...state, balance: state.balance - action.payload };
 
     case "requestLoan":
-      if (state.loan > 0) return state;
+      // if (state.loan > 0) return state;
       return {
         ...state,
-        loan: action.payload,
+        loan: state.loan + action.payload,
         balance: state.balance + action.payload,
       };
 
