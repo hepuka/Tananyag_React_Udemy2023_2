@@ -1,0 +1,5 @@
+npm i json-server
+
+package.json fáljhoz hozzáadni:     "server": "json-server --watch data/questions.json PORT=8000"
+
+http://localhost:3000/questions oldal API-ként működik
