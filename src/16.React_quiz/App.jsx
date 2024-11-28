@@ -27,7 +27,7 @@ const App = () => {
     fetch("http://localhost:3000/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => console.log(err));
+      .catch((err) => dispatch({ type: "dataFailed" }));
   }, []);
 
   return (
