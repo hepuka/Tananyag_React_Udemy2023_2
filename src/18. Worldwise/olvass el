@@ -1,0 +1,7 @@
+npm i json-server
+
+package.json fáljhoz hozzáadni: "server": "json-server --watch data/cities.json --port 9000"
+
+json server API-ként működik
+
+json file-ba írhatunk is
