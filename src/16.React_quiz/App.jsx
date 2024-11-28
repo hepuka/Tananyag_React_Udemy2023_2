@@ -1,8 +1,11 @@
 import React from "react";
 import Header from "./components/Header.jsx";
 import Main from "./components/Main.jsx";
+import Loader from "./components/Loader.jsx";
+import Error from "./components/Error.jsx";
 import "./App.css";
 import { useEffect, useReducer } from "react";
+import StartScreen from "./components/StartScreen.jsx";
 
 const initialState = {
   questions: [],
@@ -21,19 +24,30 @@ const reducer = (state, action) => {
 };
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status }, dispatch] = useReducer(reducer, initialState);
+  const numQuestions = questions.length;
 
   useEffect(() => {
-    fetch("http://localhost:3000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
+    async function fetchData() {
+      try {
+        const response = await fetch("http://localhost:3000/questions");
+        const data = await response.json();
+        dispatch({ type: "dataReceived", payload: data });
+      } catch (error) {
+        dispatch({ type: "dataFailed" });
+      }
+    }
+    fetchData();
   }, []);
 
   return (
     <div className="app">
       <Header />
-      <Main></Main>
+      <Main>
+        {status === "Loading" && <Loader />}
+        {status === "Error" && <Error />}
+        {status === "Ready" && <StartScreen numQuestions={numQuestions} />}
+      </Main>
     </div>
   );
 };
