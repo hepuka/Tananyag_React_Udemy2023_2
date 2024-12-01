@@ -47,30 +47,6 @@
         "lng": "-2.13128394200588"
       },
       "id": "98443198"
-    },
-    {
-      "id": "b518",
-      "cityName": "Guarena",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-11-28T21:53:42.458Z",
-      "notes": "wqeqwe",
-      "position": {
-        "lat": "38.85682013474361",
-        "lng": "-6.020507812500001"
-      }
-    },
-    {
-      "id": "0d27",
-      "cityName": "Cardenuela-Riopico",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-11-28T21:53:48.734Z",
-      "notes": "qweqeq",
-      "position": {
-        "lat": "42.35854391749705",
-        "lng": "-3.5375976562500004"
-      }
     }
   ]
 }
