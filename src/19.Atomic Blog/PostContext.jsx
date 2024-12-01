@@ -13,7 +13,7 @@ const PostContext = createContext();
 
 function PostProvider({ children }) {
   const [posts, setPosts] = useState(() =>
-    Array.from({ length: 30 }, () => createRandomPost())
+    Array.from({ length: 5 }, () => createRandomPost())
   );
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -51,6 +51,8 @@ function PostProvider({ children }) {
   );
 }
 
+//useContext(PostContext) helyett egy saját Hook-ot használunk
+//mivel több helyen is kell használni
 function usePosts() {
   const context = useContext(PostContext);
   if (context === undefined)
@@ -58,4 +60,4 @@ function usePosts() {
   return context;
 }
 
-export { PostProvider, usePosts };
+export { PostProvider, usePosts, createRandomPost };
