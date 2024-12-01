@@ -1,13 +1,6 @@
 import { createContext, useContext, useMemo, useState } from "react";
 import { faker } from "@faker-js/faker";
 
-function createRandomPost() {
-  return {
-    title: `${faker.hacker.adjective()} ${faker.hacker.noun()}`,
-    body: faker.hacker.phrase(),
-  };
-}
-
 // 1) CREATE A CONTEXT
 const PostContext = createContext();
 
@@ -35,6 +28,13 @@ function PostProvider({ children }) {
     setPosts([]);
   }
 
+  function createRandomPost() {
+    return {
+      title: `${faker.hacker.adjective()} ${faker.hacker.noun()}`,
+      body: faker.hacker.phrase(),
+    };
+  }
+
   const value = useMemo(() => {
     return {
       posts: searchedPosts,
@@ -42,6 +42,7 @@ function PostProvider({ children }) {
       onClearPosts: handleClearPosts,
       searchQuery,
       setSearchQuery,
+      createRandomPost,
     };
   }, [searchedPosts, searchQuery]);
 
@@ -60,4 +61,4 @@ function usePosts() {
   return context;
 }
 
-export { PostProvider, usePosts, createRandomPost };
+export { PostProvider, usePosts };
