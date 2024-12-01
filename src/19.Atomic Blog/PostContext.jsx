@@ -19,7 +19,7 @@ function PostProvider({ children }) {
 
   // Derived state. These are the posts that will actually be displayed
   const searchedPosts =
-    searchQuery.length > 0
+    searchQuery.length > 2
       ? posts.filter((post) =>
           `${post.title} ${post.body}`
             .toLowerCase()

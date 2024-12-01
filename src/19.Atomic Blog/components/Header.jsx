@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header>
       <h1>
-        <span>⚛️</span>The Atomic Blog
+        <span>⚛️</span>Zoltan's Blog
       </h1>
       <div>
         <Results />

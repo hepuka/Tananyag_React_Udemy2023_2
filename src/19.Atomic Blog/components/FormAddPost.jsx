@@ -19,12 +19,12 @@ const FormAddPost = () => {
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Post title"
+        placeholder="Add title"
       />
       <textarea
         value={body}
         onChange={(e) => setBody(e.target.value)}
-        placeholder="Post body"
+        placeholder="Add text"
       />
       <button>Add post</button>
     </form>
