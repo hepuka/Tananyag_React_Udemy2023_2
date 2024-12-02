@@ -1,47 +1,84 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
+
+const BASE_URL = "http://localhost:9000";
 
 const AuthContext = createContext();
 
 const initialState = {
-  user: null,
+  allUser: [],
+  currentUser: null,
   isAuthenticated: false,
+  error: "",
 };
 
 function reducer(state, action) {
   switch (action.type) {
+    case "users/loaded":
+      return {
+        ...state,
+        allUser: action.payload,
+      };
     case "login":
-      return { ...state, user: action.payload, isAuthenticated: true };
+      return { ...state, currentUser: action.payload, isAuthenticated: true };
     case "logout":
-      return { ...state, user: null, isAuthenticated: false };
+      return { ...state, currentUser: null, isAuthenticated: false };
+    case "addNewPlace":
+      return { ...state, currentUser: action.payload };
+
     default:
       throw new Error("Unknown action");
   }
 }
 
-const FAKE_USER = {
-  name: "Zoltán",
-  email: "kunzoltan7707@gmail.com",
-  password: "qwerty",
-  avatar: "https://i.pravatar.cc/100?u=zz",
-};
-
 function AuthProvider({ children }) {
-  const [{ user, isAuthenticated }, dispatch] = useReducer(
+  const [{ currentUser, isAuthenticated, allUser }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
+  useEffect(function () {
+    async function fetchUsers() {
+      try {
+        const res = await fetch(`${BASE_URL}/users`);
+        const data = await res.json();
+        dispatch({ type: "users/loaded", payload: data });
+      } catch {
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading users...",
+        });
+      }
+    }
+    fetchUsers();
+  }, []);
+
   function login(email, password) {
-    if (email === FAKE_USER.email && password === FAKE_USER.password)
-      dispatch({ type: "login", payload: FAKE_USER });
+    allUser.map((user) => {
+      if (user.email === email && user.password === password) {
+        dispatch({ type: "login", payload: user });
+      }
+    });
   }
 
   function logout() {
     dispatch({ type: "logout" });
   }
 
+  function addNewPlace(newPlace) {
+    dispatch({ type: "addNewPlace", payload: newPlace });
+  }
+
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider
+      value={{
+        currentUser,
+        isAuthenticated,
+        allUser,
+        login,
+        logout,
+        addNewPlace,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

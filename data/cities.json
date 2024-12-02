@@ -1,6 +1,8 @@
 {
   "cities": [
     {
+      "id": "73930385",
+      "currentUser": "2b82",
       "cityName": "Lisbon",
       "country": "Portugal",
       "emoji": "🇵🇹",
@@ -9,44 +11,114 @@
       "position": {
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
-      },
-      "id": "73930385"
+      }
     },
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "id": "eaa0",
+      "currentUser": "2b82",
+      "cityName": "Debrecen",
+      "country": "Hungary",
+      "emoji": "🇭🇺",
+      "date": "2024-12-01T14:49:38.850Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
+        "lat": "47.50978034953473",
+        "lng": "21.697998046875004"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": "98443197"
-    },
-    {
-      "cityName": "Nijar",
+      "id": "e745",
+      "currentUser": "2b82",
+      "cityName": "Colmenar de Oreja",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2023-04-03T07:47:59.202Z",
+      "date": "2024-12-02T18:02:25.270Z",
       "notes": "",
       "position": {
-        "lat": "36.967508314568164",
-        "lng": "-2.13128394200588"
-      },
-      "id": "98443198"
+        "lat": "40.07807142745009",
+        "lng": "-3.4497070312500004"
+      }
+    },
+    {
+      "id": "107c",
+      "currentUser": "2b82",
+      "cityName": "Alfajarin",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-02T18:14:53.110Z",
+      "notes": "",
+      "position": {
+        "lat": "41.59079685105603",
+        "lng": "-0.6372070312500001"
+      }
+    },
+    {
+      "id": "5aaf",
+      "currentUser": "2b82",
+      "cityName": "La Rinconada",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-02T18:14:59.891Z",
+      "notes": "",
+      "position": {
+        "lat": "37.45741810262938",
+        "lng": "-5.910644531250001"
+      }
+    },
+    {
+      "id": "a4fc",
+      "currentUser": "55b9",
+      "cityName": "Horcajo-Medianero",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-02T18:17:19.088Z",
+      "notes": "",
+      "position": {
+        "lat": "40.68063802521456",
+        "lng": "-5.449218750000001"
+      }
+    },
+    {
+      "id": "6f48",
+      "currentUser": "55b9",
+      "cityName": "Sabonneres",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-12-02T18:17:22.304Z",
+      "notes": "",
+      "position": {
+        "lat": "43.46886761482925",
+        "lng": "1.0546875000000002"
+      }
+    },
+    {
+      "id": "fac6",
+      "currentUser": "55b9",
+      "cityName": "Santa Maria a Monte",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2024-12-02T18:21:53.230Z",
+      "notes": "",
+      "position": {
+        "lat": "43.739352079154706",
+        "lng": "10.700683593750002"
+      }
+    }
+  ],
+  "users": [
+    {
+      "name": "Zoltán",
+      "email": "kunzoltan7707@gmail.com",
+      "password": "qwerty",
+      "avatar": "https://i.pravatar.cc/100?u=zz",
+      "id": "2b82"
+    },
+    {
+      "name": "Kata",
+      "email": "fagyalkata@gmail.com",
+      "password": "qwerty",
+      "avatar": "https://i.pravatar.cc/100?u=zz",
+      "id": "55b9"
     }
   ]
 }

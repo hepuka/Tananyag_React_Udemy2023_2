@@ -13,6 +13,7 @@ import Message from "./Message";
 import Spinner from "./Spinner";
 import { useCities } from "../contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/FakeAuthContext";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -36,6 +37,7 @@ function Form() {
   const [notes, setNotes] = useState("");
   const [emoji, setEmoji] = useState("");
   const [geocodingError, setGeocodingError] = useState("");
+  const { currentUser } = useAuth();
 
   useEffect(
     function () {
@@ -50,7 +52,6 @@ function Form() {
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await res.json();
-          console.log(data);
 
           if (!data.countryCode)
             throw new Error(
@@ -77,6 +78,7 @@ function Form() {
     if (!cityName || !date) return;
 
     const newCity = {
+      currentUser: currentUser.id,
       cityName,
       country,
       emoji,
