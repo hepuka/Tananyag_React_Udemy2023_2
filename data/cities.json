@@ -79,19 +79,6 @@
       }
     },
     {
-      "id": "6f48",
-      "currentUser": "55b9",
-      "cityName": "Sabonneres",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-12-02T18:17:22.304Z",
-      "notes": "",
-      "position": {
-        "lat": "43.46886761482925",
-        "lng": "1.0546875000000002"
-      }
-    },
-    {
       "id": "fac6",
       "currentUser": "55b9",
       "cityName": "Santa Maria a Monte",
@@ -102,6 +89,19 @@
       "position": {
         "lat": "43.739352079154706",
         "lng": "10.700683593750002"
+      }
+    },
+    {
+      "id": "0198",
+      "currentUser": "55b9",
+      "cityName": "Quintanapalla",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-02T18:25:39.759Z",
+      "notes": "cool",
+      "position": {
+        "lat": "42.407234661551875",
+        "lng": "-3.5595703125"
       }
     }
   ],
