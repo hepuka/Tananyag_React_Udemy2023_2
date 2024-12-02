@@ -22,8 +22,6 @@ function reducer(state, action) {
       return { ...state, currentUser: action.payload, isAuthenticated: true };
     case "logout":
       return { ...state, currentUser: null, isAuthenticated: false };
-    case "addNewPlace":
-      return { ...state, currentUser: action.payload };
 
     default:
       throw new Error("Unknown action");
@@ -64,10 +62,6 @@ function AuthProvider({ children }) {
     dispatch({ type: "logout" });
   }
 
-  function addNewPlace(newPlace) {
-    dispatch({ type: "addNewPlace", payload: newPlace });
-  }
-
   return (
     <AuthContext.Provider
       value={{
@@ -76,7 +70,6 @@ function AuthProvider({ children }) {
         allUser,
         login,
         logout,
-        addNewPlace,
       }}
     >
       {children}

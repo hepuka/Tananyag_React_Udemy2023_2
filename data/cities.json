@@ -103,6 +103,32 @@
         "lat": "42.407234661551875",
         "lng": "-3.5595703125"
       }
+    },
+    {
+      "id": "eb4a",
+      "currentUser": "2b82",
+      "cityName": "Gelles",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-12-02T20:56:22.156Z",
+      "notes": "",
+      "position": {
+        "lat": "45.767522962149904",
+        "lng": "2.83447265625"
+      }
+    },
+    {
+      "id": "ac62",
+      "currentUser": "55b9",
+      "cityName": "Lugo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-02T20:56:40.471Z",
+      "notes": "",
+      "position": {
+        "lat": "42.94033923363183",
+        "lng": "-7.514648437500001"
+      }
     }
   ],
   "users": [
