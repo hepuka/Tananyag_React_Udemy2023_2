@@ -5,6 +5,7 @@ import {
   useCallback,
   useEffect,
 } from "react";
+import { useAuth } from "./FakeAuthContext";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -64,6 +65,11 @@ function CitiesProvider({ children }) {
   const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
     initialState
+  );
+  const { currentUser } = useAuth();
+
+  const selectedCities = cities.filter(
+    (city) => city.currentUser === currentUser?.id
   );
 
   useEffect(function () {
@@ -147,6 +153,7 @@ function CitiesProvider({ children }) {
     <CitiesContext.Provider
       value={{
         cities,
+        selectedCities,
         isLoading,
         currentCity,
         error,

@@ -27,45 +27,6 @@
       }
     },
     {
-      "id": "e745",
-      "currentUser": "2b82",
-      "cityName": "Colmenar de Oreja",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-12-02T18:02:25.270Z",
-      "notes": "",
-      "position": {
-        "lat": "40.07807142745009",
-        "lng": "-3.4497070312500004"
-      }
-    },
-    {
-      "id": "107c",
-      "currentUser": "2b82",
-      "cityName": "Alfajarin",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-12-02T18:14:53.110Z",
-      "notes": "",
-      "position": {
-        "lat": "41.59079685105603",
-        "lng": "-0.6372070312500001"
-      }
-    },
-    {
-      "id": "5aaf",
-      "currentUser": "2b82",
-      "cityName": "La Rinconada",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-12-02T18:14:59.891Z",
-      "notes": "",
-      "position": {
-        "lat": "37.45741810262938",
-        "lng": "-5.910644531250001"
-      }
-    },
-    {
       "id": "a4fc",
       "currentUser": "55b9",
       "cityName": "Horcajo-Medianero",
@@ -102,19 +63,6 @@
       "position": {
         "lat": "42.407234661551875",
         "lng": "-3.5595703125"
-      }
-    },
-    {
-      "id": "eb4a",
-      "currentUser": "2b82",
-      "cityName": "Gelles",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-12-02T20:56:22.156Z",
-      "notes": "",
-      "position": {
-        "lat": "45.767522962149904",
-        "lng": "2.83447265625"
       }
     },
     {

@@ -3,17 +3,11 @@ import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem";
 import Message from "./Message";
 import { useCities } from "../contexts/CitiesContext";
-import { useAuth } from "../contexts/FakeAuthContext";
 
 function CountryList() {
-  const { cities, isLoading } = useCities();
-  const { currentUser } = useAuth();
+  const { selectedCities, isLoading } = useCities();
 
   if (isLoading) return <Spinner />;
-
-  const selectedCities = cities.filter(
-    (city) => city.currentUser === currentUser.id
-  );
 
   if (!selectedCities.length)
     return (
