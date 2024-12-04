@@ -47,6 +47,7 @@ function reducer(state, action) {
       };
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
+
     case "finish":
       return {
         ...state,
@@ -54,6 +55,7 @@ function reducer(state, action) {
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
+
     case "restart":
       return { ...initialState, questions: state.questions, status: "ready" };
 
