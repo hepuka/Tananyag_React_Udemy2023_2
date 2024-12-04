@@ -6,7 +6,6 @@ const SECS_PER_QUESTION = 15;
 
 const initialState = {
   questions: [],
-
   // 'loading', 'error', 'ready', 'active', 'finished'
   status: "loading",
   index: 0,
