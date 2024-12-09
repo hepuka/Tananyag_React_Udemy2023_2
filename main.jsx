@@ -2,7 +2,7 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./src/16.React_quiz/App.jsx";
+import App from "./src/19.Atomic Blog/App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
