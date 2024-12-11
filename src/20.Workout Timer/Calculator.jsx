@@ -6,7 +6,6 @@ function Calculator({ workouts, allowSound }) {
   const [sets, setSets] = useState(3);
   const [speed, setSpeed] = useState(90);
   const [durationBreak, setDurationBreak] = useState(5);
-
   const [duration, setDuration] = useState(0);
 
   // const playSound = useCallback(
