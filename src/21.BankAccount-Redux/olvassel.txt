@@ -1,0 +1,5 @@
+    main.jsx
+    
+    <Provider store={store}>
+      <App />
+    </Provider>

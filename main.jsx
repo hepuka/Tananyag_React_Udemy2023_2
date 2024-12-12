@@ -2,10 +2,14 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./src/20.Workout Timer/App.jsx";
+import { Provider } from "react-redux";
+import App from "./src/21.BankAccount-Redux/App.jsx";
+import store from "./src/21.BankAccount-Redux/store.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>
 );
