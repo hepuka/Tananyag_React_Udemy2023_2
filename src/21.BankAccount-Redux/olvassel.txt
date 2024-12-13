@@ -1,5 +1,7 @@
     main.jsx
     
+    import store from "./src/21.BankAccount-Redux/store.jsx";
+    
     <Provider store={store}>
       <App />
     </Provider>
