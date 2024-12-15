@@ -1,0 +1,8 @@
+npm i react-router-dom@6
+
+createBrowserRouter() új router technológia, imperative módon.
+Az előző technológia Browserrouter-routes-route ez a régi deklaratív mód.
+
+Ez az új technológia szükséges a data fetching és a data loading-hoz a react router-ben
+
+Outlet komponenssel lehet, egy beágyazott útonalat renderelni
