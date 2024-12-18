@@ -8,7 +8,7 @@ import store from './src/22.Fast_React_Pizza/store.js';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-       <Provider store={store}>
+    <Provider store={store}>
       <App />
     </Provider>
   </StrictMode>
