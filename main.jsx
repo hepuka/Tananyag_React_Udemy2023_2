@@ -1,15 +1,18 @@
 //eredeti main.jsx
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./src/22.Fast_React_Pizza/App.jsx";
-import { Provider } from 'react-redux';
-import store from './src/22.Fast_React_Pizza/store.js';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './src/23.Wild-oasis/App.jsx';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorFallback from './src/23.Wild-oasis/ui/ErrorFallback.jsx';
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}>
+    <ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onReset={() => window.location.replace('/')}
+    >
       <App />
-    </Provider>
+    </ErrorBoundary>
   </StrictMode>
 );
