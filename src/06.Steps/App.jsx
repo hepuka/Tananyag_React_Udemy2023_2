@@ -1,6 +1,6 @@
-import Steps from "./Steps";
-import StepMessage from "./StepMessage";
-import "./App.css";
+import Steps from './Steps';
+import StepMessage from './StepMessage';
+import './App.css';
 
 export default function App() {
   return (
