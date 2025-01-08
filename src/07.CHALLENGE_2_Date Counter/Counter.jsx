@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
 const Counter = () => {
   const [step, setStep] = useState(1);
@@ -42,15 +42,15 @@ const Counter = () => {
             ? `${count} days from today is `
             : count < 0
             ? `${Math.abs(count)} days ago was `
-            : ""}
+            : ''}
           {date.toDateString()}
         </p>
 
-        {(step !== 1 || count !== 0) && (
+        {step !== 1 || count !== 0 ? (
           <div>
             <button onClick={handleReset}>Reset</button>
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );
