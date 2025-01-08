@@ -1,18 +1,14 @@
 //eredeti main.jsx
-
-import { StrictMode } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
-import App from './src/23.Wild-oasis/App.jsx';
-import { ErrorBoundary } from 'react-error-boundary';
-import ErrorFallback from './src/23.Wild-oasis/ui/ErrorFallback.jsx';
+import App from './src/21.BankAccount-Redux/App';
+import store from './src/21.BankAccount-Redux/store';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ErrorBoundary
-      FallbackComponent={ErrorFallback}
-      onReset={() => window.location.replace('/')}
-    >
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </ErrorBoundary>
-  </StrictMode>
+    </Provider>
+  </React.StrictMode>
 );
