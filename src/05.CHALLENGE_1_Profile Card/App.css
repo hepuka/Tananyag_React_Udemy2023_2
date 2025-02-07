@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -22,7 +22,7 @@ h1 {
 }
 
 .card::after {
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -37,7 +37,6 @@ h1 {
 }
 
 .skill-list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
