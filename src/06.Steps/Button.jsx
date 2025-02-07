@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Button = ({ textColor, bgColor, func, children }) => {
+const Button = ({ textColor, bgColor, stepfunction, children }) => {
   return (
     <button
       style={{ backgroundColor: bgColor, color: textColor }}
-      onClick={func}
+      onClick={stepfunction}
     >
       {children}
     </button>

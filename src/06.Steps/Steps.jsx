@@ -47,11 +47,19 @@ const Steps = () => {
           </StepMessage>
 
           <div className="buttons">
-            <Button bgColor="#7950f2" textColor="#fff" func={handlePrevious}>
+            <Button
+              bgColor="#7950f2"
+              textColor="#fff"
+              stepfunction={handlePrevious}
+            >
               <span>👈</span> Previous
             </Button>
 
-            <Button bgColor="#7950f2" textColor="#fff" func={handleNext}>
+            <Button
+              bgColor="#7950f2"
+              textColor="#fff"
+              stepfunction={handleNext}
+            >
               Next <span>👉</span>
             </Button>
           </div>
